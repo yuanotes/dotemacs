@@ -62,7 +62,7 @@
       
 (setq my-packages
       (append
-       '(el-get ropemacs switch-window color-theme-twilight zencoding-mode pymacs auto-complete auto-complete-emacs-lisp)
+       '(el-get ropemacs switch-window color-theme-twilight zencoding-mode pymacs)
        (mapcar 'el-get-source-name el-get-sources)
        )
       )
@@ -70,4 +70,4 @@
 (el-get 'sync my-packages)
 
 
-(provide 'br-el-get')
+(provide 'br-el-get)

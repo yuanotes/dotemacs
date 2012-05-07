@@ -1,6 +1,6 @@
 (if (string-match "\s23" (emacs-version))
     ;; emacs 23
-    (load-file (concat br-path "package.el")
+    (load-file (concat br-path "package.el"))
   ;;else
   ;;do nothing
   )
@@ -33,15 +33,14 @@
 
 (defvar python-packages '(python-mode python-pep8 python-pylint pony-mode))
 
-(defvar other-packages '(coffee-mode flymake-coffee less-css-mode  multi-term undo-tree yasnippet iy-go-to-char yaml-mode markdown-mode applescript-mode js2-mode zenburn-theme)
+(defvar other-packages '(coffee-mode flymake-coffee less-css-mode  multi-term undo-tree yasnippet iy-go-to-char yaml-mode markdown-mode applescript-mode js2-mode zenburn-theme auto-complete)
   "A list of other packages.")
 
+(defvar esk-packages '(idle-highlight-mode smex paredit elisp-slime-nav)
+  "A list package requried by emacs starter kit.")
 
-(defun install-packages()
-  (dolist (p (append  helm-packages python-packages other-packages))
-    (when (not (package-installed-p p))
-      (package-install p))))
-
-(install-packages)
+(dolist (p (append  helm-packages python-packages esk-packages other-packages))
+  (when (not (package-installed-p p))
+    (package-install p)))
 
 (provide 'br-package)

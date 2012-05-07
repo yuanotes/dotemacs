@@ -18,10 +18,10 @@
 (setenv "PYTHONPATH"
         (concat
          ;;         (getenv "PYTHONPATH")
-         (concat path-separator emacs-path "el-get/pymacs/")
-         (concat path-separator emacs-path "el-get/rope/")
-         (concat path-separator emacs-path "el-get/ropemode/")
-         (concat path-separator emacs-path "el-get/ropemacs/")
+         (concat path-separator br-path "el-get/pymacs/")
+         (concat path-separator br-path "el-get/rope/")
+         (concat path-separator br-path "el-get/ropemode/")
+         (concat path-separator br-path "el-get/ropemacs/")
          path-separator
          )
         )

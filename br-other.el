@@ -79,7 +79,6 @@
 
 ;;auto-complete
 (require 'auto-complete)
-(require 'auto-complete-emacs-lisp)
 (defun apply-keymap (keymap key-defs)
   "Define key map."
   (dolist (key-def key-defs)

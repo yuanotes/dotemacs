@@ -44,16 +44,21 @@
 (setq confirm-kill-emacs 'yes-or-no-p)
 
 ;; helm
+(helm-mode t)
+(require 'helm-match-plugin)            ;need type a space between two
+                                        ;patterns
+
 (require 'helm-buffers)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
+
+(require 'helm-files)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
 
 ;; windows 返回模式
 (when (fboundp 'winner-mode) 
   (winner-mode) 
   (windmove-default-keybindings))
-
-;; (global-unset-key (kbd "C-x C-b"))
-;; (global-set-key (kbd "C-x C-b") 'anything-project-files)
 
 ;;pcomplete
 (defconst pcompl-git-commands
@@ -62,6 +67,7 @@
     "init" "log" "merge" "mv" "pull" "push" "rebase"
     "reset" "rm" "show" "status" "tag")
   "List of `git' commands.")
+
 (defun pcomplete/git ()
   "Completion for `git'."
   ;; Completing for command argument.
@@ -122,10 +128,6 @@
 (require 'which-func)
 (which-function-mode t)
 
-;; (require 'taglist)
-;; (global-unset-key (kbd "C-x TAB"))
-;; (global-set-key (kbd "C-x TAB") 'taglist)
-
 ;;(require 'edit-server)
 ;;(edit-server-start)
 
@@ -133,9 +135,11 @@
 (column-number-mode t)
 
 ;; show line number of the left margin
-(linum-mode)
+(global-linum-mode t)
+(setq linum-format "%d ")
 
 (require 'projectile)
+(projectile-global-mode t)
 (setq projectile-enable-caching t
       projectile-project-root-files '(".git" ".hg" ".bzr" "_darcs" ".projectile" ".ropeproject")
       projectile-ignored-files '("TAGS")
@@ -144,4 +148,3 @@
 
 
 (provide 'br-other)
-

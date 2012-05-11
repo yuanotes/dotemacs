@@ -4,6 +4,7 @@
   (mouse-wheel-mode t)
   (blink-cursor-mode -1))
 
+(require 'uniquify)
 ;; can't do it at launch or emacsclient won't always honor it
 (add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
 

@@ -13,3 +13,4 @@ ede-projects.el
 .zcache/
 ac-comphist.dat
 places
+tramp

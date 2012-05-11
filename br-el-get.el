@@ -19,7 +19,11 @@
                :url "git://github.com/yuanotes/taglist.git"
                :features taglist
                )
-        
+        (:name projectile
+               :type git
+               :url "git://github.com/yuanotes/projectile.git"
+               :features projectile)
+
         ;; (:name django-mode
         ;;        :type git
         ;;        :url "https://github.com/yuanotes/django-mode.git"

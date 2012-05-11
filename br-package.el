@@ -29,7 +29,7 @@
 
 ;; (defvar anything-packages '(anything anything-complete anything-extension anything-config anything-match-plugin)
 ;;   "A list of anything packages.")
-(defvar helm-packages '(helm helm-projectile projectile))
+(defvar helm-packages '(helm))
 
 (defvar python-packages '(python-mode python-pep8 python-pylint pony-mode))
 

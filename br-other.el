@@ -35,15 +35,16 @@
 ;;       )
 
 
+
 ;; save current session when exit
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
 
 
 ;; 在退出 emacs 之前确认是否退出
 (setq confirm-kill-emacs 'yes-or-no-p)
 
 ;; helm
-(global-unset-key (kbd "C-x b"))
+(require 'helm-buffers)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; windows 返回模式
@@ -99,11 +100,8 @@
 (global-auto-complete-mode t)
 
 
-
-
 ;; auto-revert
 (global-auto-revert-mode t)
-
 
 ;; remember-mode
 (setq org-default-notes-file "~/Dropbox/org/notes"
@@ -117,7 +115,6 @@
 
 
 
-
 ;; There is no ispell in homebrew, use aspell instead.
 (setq ispell-program-name "aspell")
 
@@ -125,24 +122,26 @@
 (require 'which-func)
 (which-function-mode t)
 
-
 ;; (require 'taglist)
 ;; (global-unset-key (kbd "C-x TAB"))
 ;; (global-set-key (kbd "C-x TAB") 'taglist)
 
-(require 'edit-server)
-(edit-server-start)
+;;(require 'edit-server)
+;;(edit-server-start)
 
 ;; show column number
 (column-number-mode t)
 
-(require 'sr-speedbar)
-(global-unset-key (kbd "C-x TAB"))
-(global-set-key (kbd "C-x TAB") 'sr-speedbar-toggle)
+;; show line number of the left margin
+(linum-mode)
 
-;; uniquify buffer names
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+(require 'projectile)
+(setq projectile-enable-caching t
+      projectile-project-root-files '(".git" ".hg" ".bzr" "_darcs" ".projectile" ".ropeproject")
+      projectile-ignored-files '("TAGS")
+      projectile-ignored-file-extensions '("class" "o" "so" "elc" "pyc")
+      projectile-ignored-directories '(".idea" ".venv" ".git" ".ropeproject"))
 
 
 (provide 'br-other)
+

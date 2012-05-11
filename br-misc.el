@@ -105,20 +105,14 @@
   (menu-bar-mode -1))
 
 
-;; You can keep system- or user-specific customizations here
-(setq esk-system-config (concat user-emacs-directory system-name ".el")
-      esk-user-config (concat user-emacs-directory user-login-name ".el")
-      esk-user-dir (concat user-emacs-directory user-login-name))
-
-(add-to-list 'load-path esk-user-dir)
+;; Other files to be loaded.
+(setq misc-dir (concat br-path "misc"))
+(add-to-list 'load-path misc-dir)
+(when (file-exists-p misc-dir)
+  (mapc 'load (directory-files misc-dir nil "^[^#].*el$")))
 
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
-
-(when (file-exists-p esk-system-config) (load esk-system-config))
-(when (file-exists-p esk-user-config) (load esk-user-config))
-(when (file-exists-p esk-user-dir)
-  (mapc 'load (directory-files esk-user-dir nil "^[^#].*el$")))
 
 (provide 'br-misc)

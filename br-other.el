@@ -147,4 +147,8 @@
       projectile-ignored-directories '(".idea" ".venv" ".git" ".ropeproject"))
 
 
+;; magit
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (provide 'br-other)

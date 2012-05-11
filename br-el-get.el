@@ -66,7 +66,7 @@
       
 (setq my-packages
       (append
-       '(el-get ropemacs switch-window color-theme-twilight zencoding-mode pymacs)
+       '(el-get ropemacs switch-window zencoding-mode pymacs)
        (mapcar 'el-get-source-name el-get-sources)
        )
       )

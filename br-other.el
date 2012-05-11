@@ -135,8 +135,8 @@
 (column-number-mode t)
 
 ;; show line number of the left margin
-(global-linum-mode t)
-(setq linum-format "%d ")
+;;(global-linum-mode t)
+;;(setq linum-format "%d ")
 
 (require 'projectile)
 (projectile-global-mode t)

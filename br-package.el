@@ -33,7 +33,7 @@
 
 (defvar python-packages '(python-mode python-pep8 python-pylint pony-mode))
 
-(defvar other-packages '(coffee-mode flymake-coffee less-css-mode  multi-term undo-tree yasnippet iy-go-to-char yaml-mode markdown-mode applescript-mode js2-mode zenburn-theme auto-complete)
+(defvar other-packages '(coffee-mode flymake-coffee less-css-mode  multi-term undo-tree yasnippet iy-go-to-char yaml-mode markdown-mode applescript-mode js2-mode zenburn-theme auto-complete magit)
   "A list of other packages.")
 
 (defvar esk-packages '(idle-highlight-mode smex paredit elisp-slime-nav)

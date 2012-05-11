@@ -22,9 +22,9 @@
   (package-refresh-contents))
 
 
-;;(defvar color-theme-packages '(color-theme color-theme-github color-theme-solarized pastels-on-dark-theme django-theme pastels-on-dark-theme)
-;;  "A list of packages about color themes."
-;;  )
+(defvar emacs-theme-packages '(inkpot-theme ir_black-theme twilight-theme zenburn-theme molokai-theme)
+ "A list of packages about emacs themes."
+ )
 
 
 ;; (defvar anything-packages '(anything anything-complete anything-extension anything-config anything-match-plugin)
@@ -33,13 +33,13 @@
 
 (defvar python-packages '(python-mode python-pep8 python-pylint pony-mode))
 
-(defvar other-packages '(coffee-mode flymake-coffee less-css-mode  multi-term undo-tree yasnippet iy-go-to-char yaml-mode markdown-mode applescript-mode js2-mode zenburn-theme auto-complete magit)
+(defvar other-packages '(coffee-mode flymake-coffee less-css-mode  multi-term undo-tree yasnippet iy-go-to-char yaml-mode markdown-mode applescript-mode js2-mode auto-complete magit)
   "A list of other packages.")
 
 (defvar esk-packages '(idle-highlight-mode smex paredit elisp-slime-nav)
   "A list package requried by emacs starter kit.")
 
-(dolist (p (append  helm-packages python-packages esk-packages other-packages))
+(dolist (p (append emacs-theme-packages  helm-packages python-packages esk-packages other-packages))
   (when (not (package-installed-p p))
     (package-install p)))
 

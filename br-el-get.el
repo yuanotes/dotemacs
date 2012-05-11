@@ -23,11 +23,6 @@
                :type git
                :url "git://github.com/yuanotes/projectile.git"
                :features projectile)
-
-        ;; (:name django-mode
-        ;;        :type git
-        ;;        :url "https://github.com/yuanotes/django-mode.git"
-        ;;        )
         (:name django-mode
                :type git
                :url "git://github.com/myfreeweb/django-mode.git")
@@ -38,9 +33,6 @@
         ;;        :type git
         ;;        :url "https://github.com/rejeep/wrap-region.git"
         ;;        )
-        (:name sr-speedbar
-               :type emacswiki
-               )
         (:name rope
                :type hg
                :url "https://bitbucket.org/agr/rope" 
@@ -66,7 +58,7 @@
       
 (setq my-packages
       (append
-       '(el-get ropemacs switch-window zencoding-mode pymacs)
+       '(el-get ropemacs switch-window zencoding-mode pymacs monokai-theme)
        (mapcar 'el-get-source-name el-get-sources)
        )
       )

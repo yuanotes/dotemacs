@@ -40,8 +40,6 @@
      ;; (setq ropemacs-enable-autoimport t)
      (setq ropemacs-guess-project t)
 
-     (yas/minor-mode-on)
-
      (setq imenu-default-create-index-function 'py-imenu-create-index-new)
      ;; virtualenv
      ;;(require 'virtualenv)

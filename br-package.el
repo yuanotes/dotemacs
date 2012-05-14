@@ -22,14 +22,14 @@
   (package-refresh-contents))
 
 
-(defvar emacs-theme-packages '(inkpot-theme ir_black-theme twilight-theme zenburn-theme molokai-theme)
+(defvar emacs-theme-packages '(ir_black-theme twilight-theme zenburn-theme molokai-theme)
  "A list of packages about emacs themes."
  )
 
 
 ;; (defvar anything-packages '(anything anything-complete anything-extension anything-config anything-match-plugin)
 ;;   "A list of anything packages.")
-(defvar helm-packages '(helm))
+(defvar helm-packages '(helm helm-projectile))
 
 (defvar python-packages '(python-mode python-pep8 python-pylint pony-mode))
 

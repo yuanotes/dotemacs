@@ -51,12 +51,15 @@
 
 
 ;;zencoding and django-html
-(add-hook 'django-html-mode-hook '(lambda ()
-                                    (zencoding-mode)
-                                    (flyspell-mode-off)
-                                    (yas/minor-mode)
-                                    (yas/load-directory "~/.emacs.d/el-get/django-mode/snippets/")))
-(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
+;; (add-hook 'django-html-mode-hook '(lambda ()
+;;                                     (zencoding-mode)
+;;                                     (flyspell-mode-off)
+;;                                     (yas/minor-mode)
+;;                                     (yas/load-directory "~/.emacs.d/el-get/django-mode/snippets/")))
+(add-to-list 'auto-mode-alist '("\\.html$" . pony-tpl-mode))
+
+
+
 
 
 

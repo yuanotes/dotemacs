@@ -145,4 +145,12 @@ BEG and END (region to sort)."
   (let ((name (file-relative-name file)))
     (vc-git-command buf 0 name "blame" "-w" rev)))
 
+
+(defun alist-delete-all (key alist)
+  "Delete all element from alist if `key' is the key of an element if alist."
+  (while (assoc key alist)
+    (setq alist (delq (assoc key alist) alist))
+    )
+  (identity alist)
+  )
 (provide 'br-func)

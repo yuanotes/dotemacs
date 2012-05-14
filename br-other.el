@@ -53,6 +53,7 @@
 
 (require 'helm-files)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-b") 'helm-recentf)
 
 
 ;; windows 返回模式

@@ -55,7 +55,13 @@
 ;;                                     (zencoding-mode)
 ;;                                     (flyspell-mode-off)
 ;;                                     (yas/minor-mode)
-;;                                     (yas/load-directory "~/.emacs.d/el-get/django-mode/snippets/")))
+;;                                     (yas/load-directory
+;; "~/.emacs.d/el-get/django-mode/snippets/")))
+
+(require 'pony-mode)
+(add-hook 'pony-tpl-mode '(lambda ()
+                            (zencoding-mode)
+                            (flyspell-mode-off)))
 (add-to-list 'auto-mode-alist '("\\.html$" . pony-tpl-mode))
 
 

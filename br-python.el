@@ -51,10 +51,12 @@
 
 
 (require 'pony-mode)
-(add-hook 'pony-tpl-mode '(lambda ()
-                            (zencoding-mode)
-                            (flyspell-mode-off)))
-(add-to-list 'auto-mode-alist '("\\.html$" . pony-tpl-minor-mode))
 
+(add-hook 'html-mode-hook
+          '(lambda ()
+             (pony-tpl-mode)
+             (zencoding-mode)
+             (flyspell-mode-off)
+             ))
 
 (provide 'br-python)

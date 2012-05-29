@@ -87,23 +87,6 @@
 
 ;;auto-complete
 (require 'auto-complete)
-(defun apply-keymap (keymap key-defs)
-  "Define key map."
-  (dolist (key-def key-defs)
-    (when key-def
-      (define-key keymap (eval `(kbd ,(car key-def))) (nth 1 key-def)))))
-
-(apply-keymap ac-completing-map
- `(("<return>"   nil)
-   ("RET"        nil)
-   ("C-s"        ac-isearch)
-   ("M-j"        ac-complete)
-   ("M-n"        ac-next)
-   ("M-p"        ac-previous)
-   ("M-k"        ac-expand)
-   ("TAB"        nil)
-   )
- )
 (global-auto-complete-mode t)
 
 
@@ -152,5 +135,14 @@
 ;; magit
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+;;js2-mode
+(add-hook 'js2-mode-hook '(lambda ()
+                      (progn
+                        (setq js2-basic-offset 2
+                              js2-enter-indents-newline t)
+                        )))
+
 
 (provide 'br-other)

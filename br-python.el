@@ -50,23 +50,11 @@
 ))
 
 
-;;zencoding and django-html
-;; (add-hook 'django-html-mode-hook '(lambda ()
-;;                                     (zencoding-mode)
-;;                                     (flyspell-mode-off)
-;;                                     (yas/minor-mode)
-;;                                     (yas/load-directory
-;; "~/.emacs.d/el-get/django-mode/snippets/")))
-
 (require 'pony-mode)
 (add-hook 'pony-tpl-mode '(lambda ()
                             (zencoding-mode)
                             (flyspell-mode-off)))
-(add-to-list 'auto-mode-alist '("\\.html$" . pony-tpl-mode))
-
-
-
-
+(add-to-list 'auto-mode-alist '("\\.html$" . pony-tpl-minor-mode))
 
 
 (provide 'br-python)

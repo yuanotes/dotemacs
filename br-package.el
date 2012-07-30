@@ -1,10 +1,12 @@
-(if (string-match "\s23" (emacs-version))
-    ;; emacs 23
-    (load-file (concat br-path "package.el"))
+(if (string-match "\s24" (emacs-version))
+    (setq emacs-24 t)
   ;;else
-  ;;do nothing
+  (setq emacs-24 nil)
   )
 
+(if (not emacs-24)
+    (load-file (concat br-path "package.el"))
+) 
 (require 'package)
 
 ;; Add the original Emacs Lisp Package Archive

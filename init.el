@@ -43,10 +43,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(flyspell-default-dictionary "english")
+ '(jsshell-location-of-cscript-exe "/usr/local/bin/node")
  '(org-agenda-files (quote ("~/Dropbox/org/gtd.org")))
  '(org-directory "~/Dropbox/org/")
- '(org-mobile-directory "~/Dropbox/MobileOrg")
- '(org-mobile-files (list "~/Dropbox/org/gtd.org" "~/Dropbox/org/notes.org" "~/Dropbox/org/future.org" (quote (org-agenda-files))))
+ ;;'(org-mobile-directory "~/Dropbox/MobileOrg")
+ '(org-mobile-directory "~/ownCloud/MobileOrg")
+ '(org-mobile-files (list "~/Dropbox/org/notes.org" "~/Dropbox/org/future.org" "~/Dropbox/org/book/psych.org" "~/Dropbox/org/book/The_Road_Less_Travelled_2.org" (quote (org-agenda-files))))
  '(org-mobile-inbox-for-pull "~/Dropbox/org/mobile.org")
  '(split-height-threshold nil)
  '(split-width-threshold 120))

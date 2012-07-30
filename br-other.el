@@ -153,4 +153,8 @@
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
+
+(add-hook 'activate-mark-hook (lambda () (setq cursor-type 'bar)))
+(add-hook 'deactivate-mark-hook (lambda () (setq cursor-type 'box)))
+
 (provide 'br-other)

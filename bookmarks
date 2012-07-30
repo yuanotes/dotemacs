@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("br-other.el"
+(("The_Road_Less_Travelled_2.org"
+ (filename . "~/Dropbox/org/book/The_Road_Less_Travelled_2.org")
+ (front-context-string . "#+LAST_MOBILE_CH")
+ (rear-context-string)
+ (position . 1))
+("br-other.el"
  (filename . "~/.emacs.d/br-other.el")
  (front-context-string)
  (rear-context-string . "ovide 'br-other)")

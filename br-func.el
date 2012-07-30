@@ -153,4 +153,12 @@ BEG and END (region to sort)."
     )
   (identity alist)
   )
+
+(defun apply-keymap (keymap key-defs)
+  "Define key map."
+  (dolist (key-def key-defs)
+    (when key-def
+      (define-key keymap (eval `(kbd ,(car key-def))) (nth 1 key-def)))))
+
+
 (provide 'br-func)
